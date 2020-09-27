@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth/auth.service';
 import { NotesDataService } from '../../services/notes-data/notes-data.service';
 export class HomeComponent {
-    constructor(notesDataService) {
+    constructor(notesDataService, authService) {
         this.notesDataService = notesDataService;
+        this.authService = authService;
         this.showNoteModal = false;
     }
     ngOnInit() {
@@ -15,6 +17,7 @@ export class HomeComponent {
         this.showNoteModal = false;
     }
     onSignOut() {
+        this.authService.logout();
     }
 }
 HomeComponent.decorators = [
@@ -25,5 +28,6 @@ HomeComponent.decorators = [
 ];
 /** @nocollapse */
 HomeComponent.ctorParameters = () => [
-    { type: NotesDataService }
+    { type: NotesDataService },
+    { type: AuthService }
 ];

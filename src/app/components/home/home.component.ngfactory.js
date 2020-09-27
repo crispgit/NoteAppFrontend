@@ -16,6 +16,7 @@ import * as i8 from "../notes/notes.component.ngfactory";
 import * as i9 from "../notes/notes.component";
 import * as i10 from "@angular/common";
 import * as i11 from "./home.component";
+import * as i12 from "../../services/auth/auth.service";
 var styles_HomeComponent = [];
 var RenderType_HomeComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_HomeComponent, data: {} });
 export { RenderType_HomeComponent as RenderType_HomeComponent };
@@ -36,6 +37,6 @@ export function View_HomeComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld
         var pd_0 = (_co.onShowNoteModal($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, i8.View_NotesComponent_0, i8.RenderType_NotesComponent)), i0.ɵdid(5, 114688, null, 0, i9.NotesComponent, [i4.NotesApiService, i5.NotesDataService], null, { showNoteModalEvent: "showNoteModalEvent" }), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_HomeComponent_1)), i0.ɵdid(7, 16384, null, 0, i10.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i0.ɵeld(8, 0, null, null, 0, "div", [["class", "footer"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; _ck(_v, 2, 0); _ck(_v, 5, 0); var currVal_0 = _co.showNoteModal; _ck(_v, 7, 0, currVal_0); }, null); }
-export function View_HomeComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "app-home", [], null, null, null, View_HomeComponent_0, RenderType_HomeComponent)), i0.ɵdid(1, 114688, null, 0, i11.HomeComponent, [i5.NotesDataService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+export function View_HomeComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "app-home", [], null, null, null, View_HomeComponent_0, RenderType_HomeComponent)), i0.ɵdid(1, 114688, null, 0, i11.HomeComponent, [i5.NotesDataService, i12.AuthService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var HomeComponentNgFactory = i0.ɵccf("app-home", i11.HomeComponent, View_HomeComponent_Host_0, {}, {}, []);
 export { HomeComponentNgFactory as HomeComponentNgFactory };
